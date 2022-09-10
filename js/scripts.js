@@ -26,13 +26,12 @@ window.onload = function() {
     event.preventDefault();
 
     const inputNumber = document.getElementById("inputNumber").value;
-    console.log(inputNumber);
-    returnNumberArray(inputNumber);
+    const returnNumbArray = returnNumberArray(inputNumber);
     
-    if (!document.getElementById("inputNumber").value) {
+    if (!inputNumber) {
       document.querySelector(".message").innerText = "No number detected! Please enter a whole number!";
     } else {
-      document.querySelector(".message").innerText = returnNumberArray(inputNumber);
+      document.querySelector(".message").innerText = returnNumbArray;
     }
   }
 }
