@@ -4,8 +4,8 @@ function returnNumberArray(input) {
     numberArray.push(i);
   } 
   for (let i = 0; i < numberArray.length; i++) {
-    if (numberArray[i].toString().includes("1")) {
-      numberArray[i] = "Beep!"
+    if (numberArray[i].toString().includes("3")) {
+      numberArray[i] = "Won't you be my neighbor?"
     } 
   }
   for (let i = 0; i < numberArray.length; i++) {
@@ -14,9 +14,9 @@ function returnNumberArray(input) {
     }
   }
   for (let i = 0; i < numberArray.length; i++) {
-    if (numberArray[i].toString().includes("3")) {
-      numberArray[i] = "\"Won't you be my neighbor, " + document.getElementById("inputName").value + "?\""
+    if (numberArray[i].toString().includes("1")) {
+      numberArray[i] = "Beep!"
     }
+    return numberArray;
   }
-  return numberArray;
 }
