@@ -17,6 +17,21 @@ function returnNumberArray(input) {
     if (numberArray[i].toString().includes("1")) {
       numberArray[i] = "Beep!"
     }
-    return numberArray;
+  }
+  return numberArray;
+}
+
+window.onload = function() {
+  document.querySelector("form").onsubmit = function(event) {
+    event.preventDefault();
+
+    const inputNumber = document.getElementById("inputNumber").value;
+    const returnNumbArray = returnNumberArray(inputNumber);
+    
+    if (!inputNumber) {
+      document.querySelector(".message").innerText = "No number detected! Please enter a whole number!";
+    } else {
+      document.querySelector(".message").innerText = returnNumbArray;
+    }
   }
 }
