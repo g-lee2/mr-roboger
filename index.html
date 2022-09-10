@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
-  <script src="js/scripts.js"></script>
-  <title>Mr. Roboger's Neighborhood</title>
-</head>
-<body>
-  <h1>Welcome to Mr. Roboger's Neighborhood!</h1>
-  <h1>Get your personalized message!</h1>
-  <br><br>
-  <form>
-    <label for="inputNumber">Enter any number:</label>
-    <input id="inputNumber" type="number">
-    <button type="submit">Give me my message!</button>
-  </form> 
-  <h1>Your Message:</h1>
-  <br><br>
-  <p><span class="message"></span></p>
-</body> 
+  <head>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/scripts.js"></script>
+    <title>Mr. Roboger's Neighborhood</title>
+  </head>
+  <body>
+    <div class="main-header">
+    <h1>Welcome to Mr. Roboger's Neighborhood!</h1>
+    </div>
+    <div class="input-section">
+    <h1>Get your personalized message!</h1><br>
+    <br>
+    <form>
+      <label for="inputName">Enter your name:</label>
+      <input id="inputName" type="text"><br>
+      <br>
+      <label for="inputNumber">Enter any number:</label>
+      <input id="inputNumber" type="number">
+      <button type="submit">Give me my message!</button>
+    </form> 
+    </div>
+    <div class="the-result">
+    <h1>Your Message:</h1><br>
+    <br>
+    <p><span class="message"></span></p>
+    </div>
+  </body> 
 </html>
