@@ -1,24 +1,21 @@
-function returnNumberArray(input) {
+function returnNumberArray() {
   const numberArray = [];
   for (let i = 0; i <= input; i++) {
     numberArray.push(" " + i);
   } 
   for (let i = 0; i < numberArray.length; i++) {
-    if (numberArray[i].toString().includes("3")) {
-      numberArray[i] = "\"Won't you be my neighbor, " + document.getElementById("inputName").value + "?\""
-    }
-  }
-  for (let i = 0; i < numberArray.length; i++) {
-    if (numberArray[i].toString().includes("2")) {
-      numberArray[i] = " \"Boop!\"";
-    }
-  }
-  for (let i = 0; i < numberArray.length; i++) {
-    if (numberArray[i].toString().includes("1")) {
-      numberArray[i] = " \"Beep!\"";
+    if (numberArray[i].toString().includes(target)) {
+      numberArray[i] = replacement;
     }
   }
   return numberArray;
+}
+
+function robogersNeighborhood() {
+  let neighborhood = returnNumberArray(numberArray, target, replacement);
+  neighborhood = replaceNumber(neighborhood, "3", "Won't you be my neighbor?");
+  neighborhood = replaceNumber(neighborhood, "2", "Boop!");
+  neighborhood = replaceNumber(neighborhood, "1", "Beep!");
 }
 
 window.onload = function() {
@@ -27,6 +24,7 @@ window.onload = function() {
 
     const inputNumber = document.getElementById("inputNumber").value;
     const returnNumbArray = returnNumberArray(inputNumber);
+    robogersNeighborhood(input);
     
     if (!inputNumber) {
       document.querySelector(".message").innerText = "No number detected! Please enter a whole number!";
