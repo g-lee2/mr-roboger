@@ -8,5 +8,10 @@ function returnNumberArray(input) {
       numberArray[i] = "Beep!"
     } 
   }
+  for (let i = 0; i < numberArray.length; i++) {
+    if (numberArray[i].toString().includes("2")) {
+      numberArray[i] = "Boop!";
+    }
+  }
   return numberArray;
 }
